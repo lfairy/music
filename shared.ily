@@ -2,4 +2,5 @@
 
 \header {
     composer = "Chris Wong"
+    tagline = ""
     }
