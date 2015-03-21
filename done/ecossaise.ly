@@ -7,6 +7,7 @@
 
 \header {
     title = "Écossaise"
+    copyright = "© 2014"
     }
 
 global = {
