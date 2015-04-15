@@ -54,14 +54,14 @@ A = {
     \repeat volta 2 {
 
         \relative f' {
-            | b16( d b gs as8)-. as-.
-            | as16( cs as g a8)-. a-.
-            | a16( c a fs gs8)-. gs-.
+            | r4 b16( d b gs
+            | as8)-. as-. as16( cs as g
+            | a16 c a fs gs8)-. gs-.
             | R2
 
-            | gs16( b gs f g8)-. g-.
-            | g16( as g e fs8)-. fs-.
-            | fs16( a fs ds f8)-. f-.
+            | r4 gs16( b gs f
+            | g8)-. g-. g16( as g e
+            | fs16 a fs ds f8)-. f-.
             | << { f?-. f-. f-. f-. } \\ { r4 b, } >>
             }
 
@@ -172,23 +172,35 @@ B = {
     \repeat volta 2 {
         \relative f {
             << {
-                | f'4( e)
-                | e( ds)
-                | ds( d)
+                | r4 f' ~
+                | f e ~
+                | e ds
                 | R2
-                | d4( cs)
-                | cs( c)
-                | c( b)
+                | r4 d ~
+                | d cs ~
+                | cs c
                 }
             \\ {
-                | d2
-                | cs
-                | c
-                | R_"dramatic pause"
+                | b,2 ~
+                | b ~
                 | b
-                | as
+                | b
+                | gs ~
+                | gs ~
+                | gs
+                | r4 cs
+                }
+            \\ {
+                \stemDown \tieDown
+                | s4 d'
+                | cs2
+                | c
+                | R
+                | s4 b
+                | as2
                 | a
-                | r4 cs,
+                | s2
+                \stemNeutral \tieNeutral
                 } >>
             }
 
