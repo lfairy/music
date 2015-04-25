@@ -41,7 +41,7 @@ A = {
         | fs8( e d fs e4)-. a-.
         | fs8( e d fs e4)-. a,-.
 
-        | fs'8( e d4) fs8( e d4)
+        | <b fs'>8(\arpeggio e d4) fs8( e d4)
         | g8( fs e4) g8( fs e4)
         | fs8( e d fs e4)-. a-.
         | d,8( cs? b d cs4)-. fs,-.
@@ -118,8 +118,7 @@ B = {
         | g,4( <g' bf>) a,4( <f' c'>)
 
         \key g \major
-        \arpeggioArrowDown
-        | <g,, d' b'>4(->\arpeggio <g'' b>) d4( <g b>)
+        | <g,, g'>4(->\arpeggio <g'' b>) d4( <g b>)
         | c,4( <g' c>) e4( <g c>)
         \arpeggioArrowUp
         | <g, d' b'>2\arpeggio c'?4-. <c e>-.
