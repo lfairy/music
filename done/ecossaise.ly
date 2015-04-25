@@ -113,7 +113,7 @@ B = {
     \key bf \major
     \relative bf, {
         | bf4( <bf' d>) bf,4( <bf' d>)
-        | ef,,4( <g' bf>) ef,4( <g' bf>)
+        | ef,,4( <bf'' d>) ef,,4( <bf'' d>)
         | g,4( <g' bf>) a,4( <f' c'>)
         | g,4( <g' bf>) a,4( <f' c'>)
 
