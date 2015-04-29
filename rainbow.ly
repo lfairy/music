@@ -63,11 +63,11 @@ A = {
         | d4. c16 d c8 bf bf c
         | d2 c8 bf bf c
         | d1
-        | r8 d, fs a d <d, d'>[ <fs fs'> <a a'>]
+        | d,8 <d d'>[ <fs fs'> <a a'>] <d d'> <d d'>[ <fs fs'> <a a'>]
         }
 
     \relative g' {
-        | <d' d'>4 \stemUp <g b d g>\arpeggio \stemNeutral << { g,4. a16 b } \\ <b, d>2 >>
+        | <d'' d'>4 \stemUp <g b d g>\arpeggio \stemNeutral << { g,,4. a16 b } \\ <b, d>2 >>
         | << { a'8 g g a b4 g8 e'16 d } \\ { r4 d, r d } >>
         | c'8 d16 c b8 c16 b a8 <b, e g> <a d fs> <g c! e>
         \time 2/4
@@ -142,8 +142,8 @@ B = {
         | bf4( a af2)
         | g4( f ef2)
         | d8 d,[ fs a] d <d, d'>[ <fs fs'> <a a'>]
-        | <d d'> <d, d'>[ <fs fs'> <a a'>] <d d'> <d, d'>[ <fs fs'> <a a'>]
-        | <d d'>4 \change Staff = "A" <g' b d>\arpeggio \change Staff = "B" << { r8 g, d g } \\ <g,, g'>2 >>
+        | <d, d'>4 <c c'> <b b'> <a a'>
+        | r \change Staff = "A" <g'''' b d>\arpeggio \change Staff = "B" << { r8 g,, d g } \\ <g,, g'>2 >>
         | << { r8 fs'' <a c> d, r d b'4 } \\ { d,2 g, } >>
         | <c' e>8 r <b d> r r <a,, a'> <b b'> <cs cs'>
         | <d d'> <d, d'> <fs fs'> <a a'>
