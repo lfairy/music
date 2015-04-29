@@ -80,7 +80,7 @@ A = {
             }
         \\ {
             | r8 e <ds fs> <b e fs> <c e g> r <d fs>4
-            | r <d fs> s2
+            | r <d fs> r <d g>
             } >>
         | g4 <b, d g> g'2
         }
@@ -113,7 +113,7 @@ B = {
     \relative d' {
         | r8 <g a>-- r <g a>-- r << { a( d, a') } \\ fs4. >>
         << {
-            | b2 r4 a ~
+            | b2 r4 g
             | a2. b4
             }
         \\ {
