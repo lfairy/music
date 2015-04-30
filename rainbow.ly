@@ -3,7 +3,7 @@
 \include "articulate.ly"
 \include "shared.ily"
 
-#(set-global-staff-size 23)
+#(set-global-staff-size 22)
 
 \header {
     title = "Prelude"
@@ -79,7 +79,7 @@ A = {
         }
 
     \relative f'' {
-        | f4 f f4. g16( a
+        | f4-- f-- f4.-- g16( a
         | bf8 a g f g4 e8) f16( g
         | a8 g f e f4) d8.( c16
         | d4.) c16( d c8 bf bf c
@@ -133,7 +133,7 @@ B = {
         \\ {
             | d2 r4 b
             } >>
-        | <c' e>8 r <b d> r r <a, b'> <b a'> <cs g'>
+        | <c' e>8-. r <b d>-. r r <a, b'> <b a'> <cs g'>
         | d d,[ fs a]
         | d4 <g, g'> r8 e' ~ <e, e'>4
         | r8 << { d''8( c b a2) } \\ { <b d>8( <a c> <g b> fs4 d) } >>
@@ -157,9 +157,9 @@ B = {
 
     \clef bass
     \relative d, {
-        \stemDown
+        \stemDown \slurDown
         | g4( a b cs) ~
-        \stemNeutral
+        \stemNeutral \slurNeutral
         | cs << { d ~ d d } \\ { s fs, g } >>
         | <e e'>( <fs fs'> <gs gs'> <a a'>)
         | << <c g'>2 \\ { r4 c, } >>
@@ -185,12 +185,60 @@ B = {
         | r \change Staff = "A" <g'' b d>\arpeggio
         \change Staff = "B" << { r8 g,,( d g) } \\ <g,, g'>2 >>
         | << { r8 fs''( <a c> d,) r d( b'4) } \\ { d,2 g, } >>
-        | <c' e>8 r <b d> r r <a,, a'> <b b'> <cs cs'>
+        | <c' e>8-. r <b d>-. r r <a,, a'> <b b'> <cs cs'>
         | <d d'> <d, d'>[ <fs fs'> <a a'>]
-        | <d d'>4 <g g'> r <e e'>
+        | <d d'>4-- <g g'> r <e e'>
         | r8 <c' c'>( <b b'> <a a'> <g g'>) r <fs fs'>4--
         | r <fs fs'>-- r8 <g g'> <d d'> <b b'>
         | <g g'>4 <d d'> g'2
+        }
+    }
+
+dynamics = {
+    {
+        | s4\p\< s s2\f
+        | s2.\> s4\!
+        | s2 s\<
+        | s2\f
+        | s4 s\sf s2\p
+        | s1
+        | s1
+        | s1
+        }
+
+    {
+        | s1\p
+        | s1
+        | s1
+        | s2
+        }
+
+    {
+        | s1\mp
+        | s2.\> s4\p
+        | s1\<
+        | s2\sf
+        }
+
+    {
+        | s1\p
+        | s1
+        | s1
+        | s1
+        | s1
+        | s1-\markup { \italic "cresc." }
+        | s2\< s2^\markup { \italic "rit." }
+        }
+
+    {
+        | s2\! s\ff
+        | s1
+        | s2 s8 s4.\<
+        | s2\f
+        | s4 s\sf s s\sf
+        | s2. s4\sf
+        | s4 s\sf s2
+        | s4 s\sf s2\p
         }
     }
 
@@ -198,6 +246,7 @@ stuff = <<
     \new PianoStaff <<
         #(set-accidental-style 'piano)
         \new Staff = "A" { \A }
+        \new Dynamics \dynamics
         \new Staff = "B" { \B }
         >>
     >>
