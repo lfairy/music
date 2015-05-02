@@ -76,8 +76,9 @@ A = {
 
             \key f \major
             | d f d b c ef c a
-            | b[ gs] <e! g ef'>-^_"as annoyingly as possible" r q-^ r q-^ r
-            | q-^ r q-^ r q-^ r q-^ r
+            | b[ gs] <e! c' ef>_"as annoyingly as possible"
+            gs <e! c' ef> gs <e! c' ef> gs
+            | <e! c' ef> gs <e! c' ef> gs <e! c' ef> gs <e! c' ef> gs
 
             | r4 a,
             | r4 r8 f'
@@ -231,7 +232,12 @@ B = {
 
             \key f \major
             | R2
-            | s2*19
+            | r8 g-. f-. e-.
+            | d-. c-. bf-. g-.
+            \slurDown
+            | f16( a c f \change Staff = "A" \stemDown a4)
+            \change Staff = "B" \stemNeutral \slurNeutral
+            | s2*16
             }
 
         }
