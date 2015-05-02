@@ -85,11 +85,11 @@ A = {
         | d4.) c16( d c8 bf bf c
         | d2) c8( bf bf c
         | d1)
-        | d,8 <d d'>[ <fs fs'> <a a'>] <d d'> <d d'>[ <fs fs'> <a a'>]
+        | r8 <d,, d'>[ <fs fs'> <a a'>] <d d'> <d d'>[ <fs fs'> <a a'>]
         }
 
     \relative g' {
-        | <d'' d'>4 \stemUp <g b d g>\arpeggio \stemNeutral
+        | <d' d'>4 \stemUp <g' b d g>\arpeggio \stemNeutral
         << { g,,4. a16( b
             | a8 g g a b4 g8) \stemNeutral \slurNeutral e'16([ d]
             | c8) d16( c b8) c16( b a8) <b, e g> <a d fs> <g c! e>
@@ -178,12 +178,12 @@ B = {
         | bf4( a af2)
         | g4( f ef2)
         | d8 d,[ fs a] d <d, d'>[ <fs fs'> <a a'>]
-        | <d, d'>4 <c c'> <b b'> <a a'>
+        | <d, d'>4-> <c c'>-> <b b'>-> <a a'>->
         }
 
     \relative g {
         | r \change Staff = "A" <g'' b d>\arpeggio
-        \change Staff = "B" << { r8 g,,( d g) } \\ <g,, g'>2 >>
+        \change Staff = "B" << { r8 g,,( d g) } \\ <g,, g'>2-> >>
         | << { r8 fs''( <a c> d,) r d( b'4) } \\ { d,2 g, } >>
         | <c' e>8-. r <b d>-. r r <a,, a'> <b b'> <cs cs'>
         | <d d'> <d, d'>[ <fs fs'> <a a'>]
@@ -215,7 +215,7 @@ dynamics = {
 
     {
         | s1\mp
-        | s2.\> s4\p
+        | s2\< s4\> s\!
         | s1\<
         | s2\sf
         }
