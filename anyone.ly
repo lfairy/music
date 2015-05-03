@@ -3,7 +3,7 @@
 \include "articulate.ly"
 \include "shared.ily"
 
-#(set-global-staff-size 23)
+#(set-global-staff-size 22)
 
 \header {
     title = "anyone lived in a pretty how town"
