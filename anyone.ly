@@ -38,6 +38,13 @@ stuff = <<
         | b16 b r8 b16 b r8 b r b16 b r b
         | c8 b a g f f f4
 
+        \bar "||"
+
+        | b8 b b8. b16 b8 b b8. b16
+        | d8 b b8. b16 d8 b b4
+        | b8 b b8. b16 b8 b b4
+        | c16 c b8 b16 b8 b16 d8 b b4
+
         \bar "|."
         }
 
@@ -56,6 +63,11 @@ stuff = <<
         and down they for -- got as up they grew
         aut -- umn win -- ter spring sum -- mer)
         that no -- one loved him more by more
+
+        when by now and tree by leaf
+        she laughed his joy she cried his grief
+        bird by snow and stir by still
+        an -- y -- one's an -- y was all to her
         }
     >>
 
