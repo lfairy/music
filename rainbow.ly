@@ -22,7 +22,7 @@ A = {
         << {
             | g4 g g4. a16( b
             | a8 g g a b4 g8) \stemNeutral e'16[( d]
-            | c8) d16( c b8) c16( b a8) <e g> <d fs> <c! e>
+            | c8) d16( c b8) c16( b a8) <e g> <d fs> <cs e>
             }
         \\ {
             | r4 b <b d>2
@@ -85,7 +85,7 @@ A = {
         | d4.) c16( d c8 bf bf c
         | d2) c8( bf bf c
         | d1)
-        | r8 <d,, d'>[ <fs fs'> <a a'>] <d d'> <d d'>[ <fs fs'> <a a'>]
+        | d,8 <d, d'>[ <fs fs'> <a a'>] <d d'> <d d'>[ <fs fs'> <a a'>]
         }
 
     \relative g' {
@@ -133,7 +133,7 @@ B = {
         \\ {
             | d2 r4 b
             } >>
-        | <c' e>8-. r <b d>-. r r <a, b'> <b a'> <cs g'>
+        | <e' g>8-. r <d fs>-. r r <a, b'> <b a'> <cs g'>
         | d d,[ fs a]
         | d4 <g, g'> r8 e' ~ <e, e'>4
         | r8 << { d''8( c b a2) } \\ { <b d>8( <a c> <g b> fs4 d) } >>
@@ -185,7 +185,7 @@ B = {
         | r \change Staff = "A" <g'' b d>\arpeggio
         \change Staff = "B" << { r8 g,,( d g) } \\ <g,, g'>2-> >>
         | << { r8 fs''( <a c> d,) r d( b'4) } \\ { d,2 g, } >>
-        | <c' e>8-. r <b d>-. r r <a,, a'> <b b'> <cs cs'>
+        | <e'' g>8-. r <d fs>-. r r <a,, a'> <b b'> <cs cs'>
         | <d d'> <d, d'>[ <fs fs'> <a a'>]
         | <d d'>4-- <g g'> r <e e'>
         | r8 <c' c'>( <b b'> <a a'> <g g'>) r <fs fs'>4--
