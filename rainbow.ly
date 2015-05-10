@@ -143,13 +143,15 @@ B = {
 
     \clef treble
     \relative d' {
-        | r8 <g a>-- r <g a>-- r << { a( d, a') } \\ fs4. >>
+        r4
         << {
-            | b2 r4 g(
+            a'2.
+            | b4( g) r g(
             | a2. b4)
             }
         \\ {
-            | r4 g cs,2(
+            g4( fs d) ~
+            | d2 cs(
             | b4 cs d2)
             } >>
         | R2
