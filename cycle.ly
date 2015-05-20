@@ -32,7 +32,7 @@ stuff = \relative c'' {
     | e8.( cs16 a4 ~ a8) f'16( a c,8) r
     | \acciaccatura af8 f'8.( e32 d c'8.) e,32( d c'8. e,16 d8) r
     | \acciaccatura e8 cs8.( a16 f4 ~ f8.) a32( c af8) r
-    | \acciaccatura af8 f''8.( e,32 d f'8.) e,32( d f'8. e,16 d8) r
+    | \acciaccatura f'8 e8.( d32 c e8.) d32( c e4\trill d)
     \time 2/4
     | \acciaccatura { f16 e } d2\trill
     \time 4/4
