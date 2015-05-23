@@ -21,7 +21,7 @@ A = {
     \key f \major
 
     \relative f' {
-        \repeat volta 2 {
+        \repeat unfold 2 {
             | a4( bf8 c) bf?4-! a-!
             | g8( a g f) g4-! e-!
             | a4( bf8 c) bf4-! a-!
@@ -76,6 +76,7 @@ A = {
     }
 
 dynamics = {
+    | s1*8\mf
     | s1*8\f
     | s1*4\mf
     | s1*2\mp
@@ -97,17 +98,27 @@ B = {
     \arpeggioArrowUp
 
     \relative g, {
-        \repeat volta 2 {
-            | g4( d') <g b?>-! d-!
-            | a4( d) <d' fs>-! d,-!
-            | g,4( d') <g b>-! d-!
-            | a4( d) <d' fs>-! <c fs>-!
+        | g4( d') <g b?>-! d-!
+        | a4( d) <d' fs>-! d,-!
+        | g,4( d') <g b>-! d-!
+        | a4( d) <d' fs>-! <c fs>-!
 
-            | g,4( d') <g b>-! d-!
-            | a4( d) <d' fs>-! d,-!
-            | r2 c8( d e fs)
-            | r4 g4-. <c, g' e'>2\arpeggio
-            }
+        | g,4( d') <g b>-! d-!
+        | a4( d) <d' fs>-! d,-!
+        | r2 c8( d e fs)
+        | r4 g4-. <c, g' e'>2\arpeggio
+        }
+
+    \relative g, {
+        | <g, g'>4( d'') <g b?>-! d-!
+        | a4( d) <d' fs>-! d,-!
+        | <g,, g'>4( d'') <g b>-! d-!
+        | a4( d) <d' fs>-! <c fs>-!
+
+        | <g,, g'>4( d'') <g b>-! d-!
+        | a4( d) <d' fs>-! d,-!
+        | r2 c8( d e fs)
+        | r4 g4-. <c, g' e'>2\arpeggio
         }
 
     \key bf \major
@@ -124,7 +135,7 @@ B = {
         | <g, d' b'>2\arpeggio c'?4-. <c e>-.
         | <d,, a' fs'>2\arpeggio <d' fs>4-. d-.
 
-        | <b, fs' b>2\arpeggio <b'' d fs>\arpeggio
+        | <b, fs' d'>2\arpeggio <b'' d fs>\arpeggio
         | <e,, b' g'>\arpeggio <b'' e g>\arpeggio
         | <c,, g' e'>\arpeggio e''8( fs g4)
         }
@@ -145,7 +156,7 @@ B = {
         | r2 <c,, c'>8( <d d'> <e e'> <fs fs'>)
         \arpeggioArrowUp
         | r4 <g' b>4-.
-        << <c, g' e'>2\arpeggio_\fermata \\ { s4 <g, g'>\fermata } >>
+        << <c, g' e'>2\arpeggio_\fermata \\ { s4 <g, g'>->\fermata } >>
         }
 
     }
