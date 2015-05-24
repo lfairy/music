@@ -55,6 +55,41 @@ stuff = \relative c'' {
     | c1)
     | \acciaccatura e8 cs r r4 r2
 
+    \bar "||"
+    | e8( cs' a d, c'4) r
+    \time 3/4
+    | r e,8( cs a') r
+    \time 4/4
+    | e8( cs' a f a--) r c-- r
+    | r4 af8.( a32 c af8 f e4)
+
+    | af,8( f' e d c'4) r
+    \time 3/4
+    | r e,8( cs a) r
+    \time 4/4
+    | f1
+    \time 2/4
+    | e'8( cs' a) r
+    \time 4/4
+    | \acciaccatura f8 a1
+    \time 2/4
+    | c,8( af' f) r
+
+    \time 4/4
+    | e8( cs a d c'4) r
+    | r e,8.( cs32 e cs8 af') r f(
+
+    \bar "||"
+
+    \time 3/4
+    | e d c2)
+    | \acciaccatura e8 cs r r2
+    | \acciaccatura { e16 d } c2.
+    | \acciaccatura e8 cs-_ a-_ f-_ a-_ c-_ af'-_
+    | \acciaccatura f8 e16( d c8 ~ c2)\fermata
+
+    \bar "|:"
+
     }
 
 \score {
