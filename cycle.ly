@@ -18,7 +18,7 @@ stuff = \relative c'' {
     \time 3/4
     | \acciaccatura af'8 f2( \times 2/3 { e8 d c }
     | e-_) cs-_ a-_ f-_ a-_ c-_
-    | \acciaccatura { af'16 f } e8-- d-- c-- r r4
+    | \acciaccatura { af'16 f } e8( d c4) r
     | \acciaccatura e8 cs-. r r2
 
     \bar "||"
@@ -42,18 +42,25 @@ stuff = \relative c'' {
     a16(
     \bar "||"
     \time 2/4
-    | f8) a c af16( f e8) d c r
-    | e8.( cs16 a' f a f a8) c r gs'16( a
-    | f8) a, c af'16( f e,8) d c r
+    | f8)-. a-. c( af16 f e8)-. d-. c-. r
+    | e8.( cs16 a' f a f a8 c) r gs'16( a
+    | f8)-. a,-. c-. af'16( f e,8)-. d-. c-. r
     | e8.( cs16 a'8 f16 a f4) r8 a16( c
 
     | af'8. f16 af8. f16 e d c8) r c16( e
-    | cs8) c16( e cs8) c16( e cs4) a16( f a c
-    | af'8. f16 c'8 af16 f e d c8) r c16( e
-    | cs8) c16( e d c e d
+    | cs8)-. c16( e cs8)-. c16( e cs4 a16 f a c)
+    | af'8.( f16 c'8 af16 f e d c8) r c16( e
+    | cs8)-. c16( e d c e d
+    | c4) r8
+
+    c16( a
+    | f8)-. a-. c( af16 f e8)-. d-. c-. r
+    | e8.( cs16 a' f a f a8 c) r gs'16( a
+    | f8)-. a,-. c-. af'16( f e f e d) c,8-- r
+    | e'( cs16 a' f8 e16 d
     \time 4/4
     | c1)
-    | \acciaccatura e8 cs r r4 r2
+    | \acciaccatura e8 cs-. r r4 r2
 
     \bar "||"
     | e8( cs' a d, c'4) r
@@ -83,12 +90,12 @@ stuff = \relative c'' {
 
     \time 3/4
     | e d c2)
-    | \acciaccatura e8 cs r r2
+    | \acciaccatura e8 cs-. r r2
     | \acciaccatura { e16 d } c2.
     | \acciaccatura e8 cs-_ a-_ f-_ a-_ c-_ af'-_
     | \acciaccatura f8 e16( d c8 ~ c2)\fermata
 
-    \bar "|:"
+    \bar "|."
 
     }
 
