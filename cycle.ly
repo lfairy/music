@@ -105,6 +105,7 @@ stuff = \relative c'' {
     }
 
 \score {
-    \articulate \stuff
+    % \articulate \stuff
+    \stuff
     \midi { }
     }
