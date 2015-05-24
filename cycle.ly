@@ -3,7 +3,7 @@
 \include "articulate.ly"
 \include "shared.ily"
 
-#(set-global-staff-size 22)
+#(set-global-staff-size 23)
 
 \header {
     title = "Loop thing"
