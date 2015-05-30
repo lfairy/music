@@ -106,7 +106,9 @@ stuff = \relative c'' {
 
 \score {
     \stuff
-    \layout { }
+    \layout {
+        system-system-spacing = #'((padding . 4))
+        }
     }
 
 \score {
