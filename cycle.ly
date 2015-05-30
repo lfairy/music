@@ -11,6 +11,8 @@
     }
 
 stuff = \relative c'' {
+    \tempo "Freely" 4 = 72
+
     \time 3/4
     | e16( cs a f a c) r8 r4
     \time 4/4
@@ -22,6 +24,7 @@ stuff = \relative c'' {
     | \acciaccatura e8 cs-. r r2
 
     \bar "||"
+    \tempo "Triumphantly" 4 = 112
 
     \time 4/4
     | e8.( cs16 a'4 ~ a8.) f32( a c4)
@@ -41,6 +44,7 @@ stuff = \relative c'' {
 
     a16(
     \bar "||"
+    \tempo "Clumsily" 4 = 88
     \time 2/4
     | f8)-. a-. c( af16 f e8)-. d-. c-. r
     | e8.( cs16 a' f a f a8 c) r gs'16( a
@@ -63,6 +67,7 @@ stuff = \relative c'' {
     | \acciaccatura e8 cs-. r r4 r2
 
     \bar "||"
+    \tempo "Plainly" 4 = 80
     | e8( cs' a d, c'4) r
     \time 3/4
     | r e,8( cs a') r
