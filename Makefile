@@ -1,6 +1,6 @@
 # Compile LilyPond files the pro way
 
-LYS := $(wildcard *.ly)
+LYS := $(wildcard *.ly) $(wildcard done/*.ly)
 PDFS := $(LYS:.ly=.pdf)
 LILYPOND := lilypond --loglevel=WARNING
 INCLUDES := shared.ily
@@ -8,10 +8,10 @@ INCLUDES := shared.ily
 all: version $(PDFS)
 
 %.pdf: %.ly $(INCLUDES)
-	$(LILYPOND) $<
+	cd $(dir $<) && $(LILYPOND) $(notdir $<)
 
 clean:
-	rm -f *.midi *.pdf
+	rm -f *.midi *.pdf done/*.midi done/*.pdf
 
 version:
 	@ $(LILYPOND) --version | head -n 1
