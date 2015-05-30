@@ -6,7 +6,7 @@
 #(set-global-staff-size 23)
 
 \header {
-    title = "Loop thing"
+    title = "Variations for flute"
     copyright = "© 2015"
     }
 
