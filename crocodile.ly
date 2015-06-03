@@ -29,7 +29,7 @@ vocals = <<
         c'8
         | c fs, fs fs a g16 b ~ b8 e,
         | e g ef a d,4 r8 c'
-        | c b e, g \times 2/3 { a g b ~ } b f?
+        | c b e, g \times 2/3 { a g b ~ } b ef,
         | e a ef d c2
 
         \bar "|."
