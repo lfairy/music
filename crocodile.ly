@@ -37,10 +37,10 @@ vocals = <<
         | r2 r4 r8
 
         c'8
-        | c fs, fs fs a g16 b ~ b8 e,
-        | e g ef a d,4 r8 c'
-        | c b e, g \times 2/3 { a g b ~ } b ef,
-        | e a ef d c2
+        | c fs, fs fs a g16 b ~ b8\fermata e,
+        | e g ef a d,4 r8\fermata c'
+        | c b e, g \times 2/3 { a^\markup { \italic "molto rit." } g b ~ } b ef,
+        | e a ef d c2^>
 
         \bar "|."
         }
@@ -71,18 +71,30 @@ right_hand = \relative c' {
     | <c'' e>8-. <c e>-. <d fs>-. <d fs>-. <c e>-. <c e>-.
     | <f, a c>1\arpeggio
 
-    | r8\p <b fs'>( <e, b'> <g d'>)
-    \times 2/3 { <e a e'>8( <d g d'> <cs fs cs'> ~ } <cs fs cs'>4)
-    << {
-        | r8 d'-- r a-- e2
-        }
-    \\ {
-        | <g, c e>4\arpeggio <a d fs>\arpeggio <gs b e>2\arpeggio
-        } >>
+    | << { r8 <b fs'>( <e, b'> <g d'>) } \\ <g, c e>2\arpeggio >>
+    \times 2/3 { <e' a e'>8( <d g d'> <cs fs cs'> ~ } <cs fs cs'>4)
+    | <g c e>4\arpeggio <a d fs>\arpeggio <gs b e>2\arpeggio
 
     | <c'' g'>8[( <b fs'>] <e, b'> <d a'>
     \times 2/3 { <b fs'>8 <a e'> <g d'>) }
     | r4 <f c'>2.--
+
+    << {
+        | c4 c <fs, a d>2\arpeggio\fermata
+        }
+    \\ {
+        | <g e'>2\arpeggio
+        }
+    \\ {
+        | s2. <fs'' cs'>4\arpeggio\fermata
+        } >>
+
+    | <c, e>8-!-\markup { \italic "sharply" } <e g>-! <b ef>-! <ef a>-!
+    <f, a d>2\arpeggio\fermata
+    | <e' a c>8( <d g b> <c f a> <b e g>)
+    << <d f>2\arpeggio \\ { \times 2/3 { a8(\arpeggio g b ~ } b4) } >>
+
+    | <f a c e>4\arpeggio <g b ef>\arpeggio <e g c>2\arpeggio\fermata\sf
     }
 
 left_hand = \relative c {
@@ -110,7 +122,15 @@ left_hand = \relative c {
     | <c g' c>4\arpeggio <d a' d>\arpeggio <e b' e>2\arpeggio
 
     | R4*3
-    | <f' a c>1\arpeggio
+    | \stemDown <f c' f a c>1\arpeggio \stemNeutral
+
+    | <c g' c>2\arpeggio <d a' d>\arpeggio\fermata
+    | c'8-! g'-! b,-! g'-!
+    << <f, c'>2\arpeggio\fermata \\ { s4 \acciaccatura g8 <g g,>4\fermata } >>
+
+    | e'2 << <f, f'>2\arpeggio \\ { s4 <g, g'>-- } >>
+    | <f' d'>4\arpeggio <g d'>\arpeggio
+    << <c, c'>2\arpeggio\fermata \\ { s4 c,\fermata } >>
     }
 
 stuff = <<
@@ -119,8 +139,8 @@ stuff = <<
         #(set-accidental-style 'piano)
         \set PianoStaff.instrumentName = #"Piano"
         \set PianoStaff.connectArpeggios = ##t
-        \new Staff \right_hand
-        \new Staff \left_hand
+        \new Staff = "R" \right_hand
+        \new Staff = "L" \left_hand
         >>
     >>
 
