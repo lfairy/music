@@ -6,7 +6,7 @@
 #(set-global-staff-size 23)
 
 \header {
-    title = "Starswirl-Sparkle correspondence"
+    title = "Starswirl–Sparkle correspondence"
     copyright = "© 2015"
     }
 
@@ -18,48 +18,63 @@ A = {
     \key g \major
 
     \relative g' {
-        | b4 g8 d' b4 e,8 e' ~
+        | b4( g8 d' b4 e,8 e' ~
         \time 3/4
-        | e2 r8 g
+        | e2) r8 g(
         \time 4/4
-        | fs g b, e d e g,4
+        | fs g b, e d e g,4)
         \time 5/8
         | r4 r8
-        << { g a
+        << { g( a
             \time 4/4
             | b4 g8 d' b4 e,8 b'' ~
-            | b2 r8 g b b ~
+            | b2) r8 g( b b ~
             \time 2/4
-            | b[ a a e]
+            | b[ a a e])
             \time 5/8
-            | g[ fs e fs d]
+            | g[( fs e fs d])
             \time 4/4
-            | d4 b8 d d4 b8 d ~
+            | d4( b8 d) d4( b8 d ~
             \time 6/8
-            | d4 r8 g b b ~
+            | d4) r8 g( b b ~
             \time 2/4
-            | b[ a a b]
+            | b[) a( a b]
             \time 5/8
-            | d[ c b c g]
+            | d[ c b c g])
             \time 4/4
-            | g4 d8 g g4 d8 g
+            | g4( d8 g) g4( d8 g)
             \time 6/8
-            | r4. g,8 d' d ~
+            | r4. g,8( d' d ~
             \time 7/8
-            | d[ c c e] e[ g, a]
+            | d[ c c e]) e[( g,_> a])_>
+
             \time 4/4
-            | b1
+            | b2 g4 d'
+            | b2 e,4 e'
+            | b2 g4 d'
+            | b2 e,4 e'
+            | b2 e,
+            | <g'' b>1\fermata
             }
         \\ { s4
-            | fs2 g
+            | fs,,2 g
             | R1
             | r4 c
             | r c4.
             | <b, fs'>2 <e g>
             | s8*6
             | r4 <c' e>
-            | <c fs b>\arpeggio <d fs>4.
+            | <c fs b>\arpeggio <c fs>4.
             | b4 c8 b bf2
+            | s8*6
+            | r4 g <d fs>4.
+
+            | <c e>1
+            | <c e>
+            | <c e>
+            | <c e>
+            | <c e> ~
+            | q
             } >>
         }
 
@@ -88,23 +103,49 @@ B = {
             | r4 <g d'> r <c e>
             | s2.
             | r4 <a e' g>
-            | r <a d fs>4.
+            | r <a d>4.
+            | r4 <b d> r <g c ef>
+            | s8*6
+            | r4 <g c e> << {
+                \voiceTwo
+                s8 g[^> a]^>
+                }
+            \new Voice {
+                \voiceOne
+                <e c'>4.
+                } >>
+
+            \voiceOne
+            | s1
+            | r2 r4 g(
+            | fs g b, e
+            | d e g,2)
             }
         \\ {
-            | g,2 c, ~
+            | g2 c, ~
             | c r4
             | g'2 c,
-            | c8 e' b' e4
+            | \oneVoice c8( e' b' e4) \voiceTwo
             | g,,2 c, ~
             | c r
 
             | a2
             | d4 ~ d4.
             | g2 c,
-            | c8 e' b' e4.
+            | \oneVoice c8( e' b' e4.) \voiceTwo
             | a,,,2
             | d4 ~ d4.
-            | g2 e
+            | g2 ef
+            | \oneVoice b'!8( c e! <b' e>4) \voiceTwo bf,,8(
+            | a2) d4.
+
+            | <e c'>1
+            | <c g' c>
+            | <g' d'>
+            | <c, g'>
+            \oneVoice
+            | <g d' g> ~
+            | q\fermata
             } >>
         }
     }
@@ -121,9 +162,8 @@ B = {
 
 \score {
     \articulate \new PianoStaff <<
-        \new Staff = "A" \A
-        \new Dynamics \dynamics
-        \new Staff = "B" \B
+        \new Staff = "A" << \A \dynamics >>
+        \new Staff = "B" << \B \dynamics >>
         >>
     \midi { }
     }
