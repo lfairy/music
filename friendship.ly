@@ -38,9 +38,9 @@ A = {
             \time 6/8
             | d4) r8 g( b b ~
             \time 2/4
-            | b[) a( a b]
+            | b[) a( <a, a'> <b b'>]
             \time 5/8
-            | d[ c b c g])
+            | d'[ c b c g])
             \time 4/4
             | g4( d8 g) g4( d8 g)
             \time 6/8
@@ -61,13 +61,20 @@ A = {
             | R1
             | r4 c
             | r c4.
-            | <b, fs'>2 <e g>
-            | s8*6
-            | r4 <c' e>
-            | <c fs b>\arpeggio <c fs>4.
-            | b4 c8 b bf2
-            | s8*6
-            | r4 g <d fs>4.
+            << {
+                | b,2 e
+                }
+            \new Voice {
+                \voiceFour
+                | fs4 g a g
+                } >>
+            \voiceTwo
+            | s4. s4 b8 ~
+            | b4 e
+            | <c fs b>4\arpeggio <c fs>4.
+            | <b fs'?>2 bf
+            | s4. s4 ef,8 ~
+            | ef4 g <e fs>4.
 
             | <c e>1
             | <c e>
@@ -83,6 +90,24 @@ A = {
 
 dynamics = {
     | s1\p
+    | s2.
+    | s1
+    | s8*5
+    | s1
+
+    | s2 s\mp
+    | s2-\markup { \italic "poco cresc." }
+    | s8*5
+    | s1
+
+    | s2.\<
+    | s2
+    | s8*5\mf\>
+    | s2 s\mp
+    | s2.
+    | s2^\markup { \italic "rit." } s4.\sf
+
+    | s1-\markup { \italic "a tempo" }
     }
 
 B = {
@@ -98,13 +123,20 @@ B = {
             | r4 <b d> r <g c> ~
             | q2 r
 
-            | r4 <a g'>
+            | r4 <e' g>
             | r4 << d4. \new Voice { \voiceFour g,4 a8 } >>
             | r4 <g d'> r <c e>
             | s2.
-            | r4 <a e' g>
-            | r <a d>4.
-            | r4 <b d> r <g c ef>
+            << {
+                | r4 <e g>
+                | r g a8
+                }
+            \new Voice {
+                | s4 a,8 b
+                \voiceFour
+                | s4 <a d>4.
+                } >>
+            | r4 <b d g> r <g bf e>
             | s8*6
             | r4 <g c e> << {
                 \voiceTwo
@@ -112,7 +144,7 @@ B = {
                 }
             \new Voice {
                 \voiceOne
-                <e c'>4.
+                <d, c'>4.
                 } >>
 
             \voiceOne
@@ -134,12 +166,12 @@ B = {
             | g2 c,
             | \oneVoice c8( e' b' e4.) \voiceTwo
             | a,,,2
-            | d4 ~ d4.
-            | g2 ef
-            | \oneVoice b'!8( c e! <b' e>4) \voiceTwo bf,,8(
+            | <d d'>4\arpeggio ~ q4.
+            | g2 e
+            | \oneVoice b'!8( c e <b' e>4) \voiceTwo bf,,8(
             | a2) d4.
 
-            | <e c'>1
+            | <e g c>1
             | <c g' c>
             | <g' d'>
             | <c, g'>
