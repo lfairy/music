@@ -72,7 +72,7 @@ A = {
             | s4. s4 b8 ~
             | b4 e
             | <c fs b>4\arpeggio <c fs>4.
-            | <b fs'?>2 bf
+            | <fs,? b>2 bf
             | s4. s4 ef,8 ~
             | ef4 g <e fs>4.
 
