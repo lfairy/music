@@ -32,6 +32,14 @@ A = {
         | a8( fs e4)
 
         \bar "||" \mark \pause
+
+        | fs8( e d fs
+        | e4 gs)
+
+        \bar "||" \mark \pause
+
+        | fs8( e d fs
+        | e4 cs)
         }
 
     % \bar "|."
@@ -63,6 +71,19 @@ B = {
             | f2
             | e
             | d
+            } >>
+
+        << {
+            | r4 <g b>
+            | r <b d>
+            | r <g b>
+            | r <g b>
+            }
+        \\ {
+            | bf,2
+            | c
+            | bf
+            | c
             } >>
         }
 
