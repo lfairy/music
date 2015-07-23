@@ -58,7 +58,7 @@ B = {
             | f,8 c' <f a>4 f,8 c' <f a>4
             | <ef, bf'>4 <g' ef'> <gf, df'> <bf' gf'>
             | f,8 c' <af' c>4 f,8 c' <af' c>4
-            | R1
+            | <ef, bf'>4 <f d'> << { g'8 d' b4 } \\ <g, d' g>2 >>
             | R1
             | R1
             }
