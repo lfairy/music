@@ -171,7 +171,7 @@ B = {
             | \oneVoice b'!8( c e <b' e>4) \voiceTwo bf,,8(
             | a2) d4.
 
-            | <e g c>1
+            | <e g e'>1
             | <c g' c>
             | <g' d'>
             | <c, g'>
