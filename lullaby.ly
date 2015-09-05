@@ -39,7 +39,7 @@ A = {
         \bar "||" \mark \pause
 
         | fs8( e d fs
-        | e4 cs)
+        | e4 cs?)
         }
 
     % \bar "|."
@@ -74,10 +74,10 @@ B = {
             } >>
 
         << {
-            | r4 <g b>
-            | r <b d>
-            | r <g b>
-            | r <g b>
+            | r4 <f bf>
+            | r <bf d>
+            | r <f bf>
+            | r <g bf>
             }
         \\ {
             | bf,2
