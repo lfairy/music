@@ -6,7 +6,7 @@
 #(set-global-staff-size 23)
 
 \header {
-    title = "Écossaise"
+    title = "Party cannon"
     copyright = "© 2014"
     }
 
