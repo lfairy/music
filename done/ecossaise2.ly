@@ -6,7 +6,7 @@
 #(set-global-staff-size 23)
 
 \header {
-    title = "Écossaise #2"
+    title = "Chimi-cherry-changa"
     copyright = "© 2015"
     }
 
