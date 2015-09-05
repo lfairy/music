@@ -12,7 +12,7 @@
 
 A = {
     \time 4/4
-    \tempo "Moderato, ma con molto rubato" 4 = 100
+    \tempo "Moderato" 4 = 100
     \clef treble
     \set Staff.midiInstrument = #"acoustic grand"
     \key f \major
@@ -36,14 +36,18 @@ A = {
             | df8( f af df) e,( gs) e'4--
             | e,8( gs b e) g,( b) g'4--
             | g,8( b d g) bf,( d) bf'?4--
-            | a8-. g-. f-. e-. d-. c-. bf-. a-.
-            | g8( bf d f e c c4)
+            << {
+                | a8( g f e d c bf a)
+                }
+            \\ {
+                | <c ef> <bf df> <af cf> <g bf>
+                <f af> <ef gf> <df ff> <c ef>
+                } >>
+            | g'8( bf d f e c c4)
             | d8-. c-. bf-. a-. g-. f-. e-. d-.
             | c8( e g bf a f f4)
             }
         }
-
-    \bar "|."
     }
 
 dynamics = {
@@ -58,9 +62,32 @@ B = {
             | f,8 c' <f a>4 f,8 c' <f a>4
             | <ef, bf'>4 <g' ef'> <gf, df'> <bf' gf'>
             | f,8 c' <af' c>4 f,8 c' <af' c>4
-            | <ef, bf'>4 <f d'> << { g'8 d' b4 } \\ <g, d' g>2 >>
-            | R1
-            | R1
+            | <ef, bf' gf'>4 <af c gf'> << { g'8 d' b4 } \\ <g, d' g>2 >>
+            | f8 c' <f a>4 d,8 a' <d f>4
+            | <g,, g'>4 <g' f'> << { g'4 e } \\ <c g'>2 >>
+            }
+        }
+
+    \repeat volta 2 {
+        \relative f {
+            | <c e g>4 r2.
+            | <bf f' bf>4 r2.
+            | c'8 bf af g f ef df c
+            << {
+                | g'8 f ef d af' gf ff ef
+                | a g f e bf' af gf f
+                | b a g fs
+                }
+            \\ {
+                | b,8 a g fs c' bf af g
+                | cs b a gs d' c bf a
+                | ds cs b r
+                } >>
+            <bf f' bf>4 <d' bf'>
+            | <e, cs'>8 <d b'> <c a'> <b gs'> <a fs'> <g e'> <f d'> <e cs'>
+            | <g d' bf'>4 <d' f bf> << { c'8 g' e4 } \\ <c, g' c>2 >>
+            | bf8 f' <bf d>4 g,8 d' <g bf>4
+            | <c,, c'>4 <c' bf'> << { c'4 a } \\ <f c'>2 >>
             }
         }
     }
