@@ -10,58 +10,62 @@
     copyright = "© 2015"
     }
 
-stuff = \relative c'' {
+stuff = \relative c' {
     \set Staff.midiInstrument = #"violin"
     \tempo "Expressively" 4 = 84
 
-    \key d \minor
-
     \time 3/4
-    | c2(\downbow f,4)
-    | e( c') d8(-- e--)
-    | ef2( b4)
-    | d2.\downbow
+    | ef2(\f\downbow af,4)
+    | g( ef') f8(-- g--)
+    | gf2( d4)
+    | f2.~\>
+    | f2\p r4
 
-    | g,4-- fs-- d'--
-    | e( f) d(
-    | e) f-- d--
+    | bf,4-- a-- f'--
+    | g(\< af) f(
+    | g) af--\> f--
 
-    | cs2(\fermata gs4)
-    | cs2(\fermata g4)
+    | e2.\p ~
+    | e4 r4 b
+    | e2._\markup { \italic "rit." } ~
+    | e4 r bf
 
-    \bar "||"
+    | a''2(-\mp_\markup { \italic "a tempo" } d,4)
+    | gs(\< cs,) fs8 gs
+    | a4\mf b8 cs b4
+    | gs(\> fs) e(
+    | g) fs-- e--
 
-    | fs'2( b,4)
-    | f'2 g,4(
-    | ef') f8-- g-- f4--
-    | d( c bf)
-    | d( cs b)
+    | d2.\p ~
+    | d2 r4
+    | c4\p b fs'
+    | d2. ~
+    | d2 r4
+    | c8 d b4 g'
+    | a(\< b) g(
+    | a) b-- g--
 
-    | a2.
-    | g4 fs d'
-    | a2.
-    | g8 a fs4 d'
-    | e( fs) d(
-    | e) fs-- d--
+    | g'2.\f ~
+    | g4 c,2
+    | fs2.(
+    | b,4) d e8\< fs
+    | g4\> a8 b a4\!
+    | fs( e) d(
+    | f)\> e-- d--
 
-    | d'2(\fermata g,4)
-    | cs fs, a
-    | c d8 e d4
-    | b a g
-    | bf a g
+    | c2.\mp ~
+    | c2 r4
+    | bf4_\markup { \italic "dim." } a e'\open
+    | c2. ~
+    | c2 r4
+    | bf8 c a4 bf
 
-    | f2.
-    | ef4 d a'
-    | f2.
-    | ef8 f d4 ef
-
-    \bar "||"
-
-    | c2( f,4)
-    | e( c') d8 e
-    | ef2( b4)
-    | d2( a4)
-    | d2.\fermata
+    | g2(\p c,,4)\<
+    | b(\> g'\! b)
+    | d( g) a8 b
+    | bf2(_\markup { \italic "rit." } f4)
+    | a2(\> e4)
+    | a2.\pp\open\fermata
 
     \bar "|."
 
