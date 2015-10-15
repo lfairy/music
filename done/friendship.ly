@@ -105,7 +105,7 @@ dynamics = {
     | s8*5\mf\>
     | s2 s\mp
     | s2.
-    | s2^\markup { \italic "rit." } s4.\sf
+    | s2^\markup { \italic "molto rit." } s4.\sf
 
     | s1-\markup { \italic "a tempo" }
     }
@@ -169,7 +169,7 @@ B = {
             | <d d'>4\arpeggio ~ q4.
             | g2 e
             | \oneVoice b'!8( c e <b' e>4) \voiceTwo bf,,8(
-            | a2) d4.
+            | a2) \acciaccatura d8 d4.
 
             | <e g e'>1
             | <c g' c>
