@@ -60,7 +60,8 @@ stuff = \relative c' {
     | c2 r4
     | bf8 c a4 bf
 
-    | g2(\p c,,4)\<
+    | g2.(\p ~
+    | g2\< c,,4)
     | b(\> g'\! b)
     | d( g) a8 b
     | bf2(_\markup { \italic "rit." } f4)
