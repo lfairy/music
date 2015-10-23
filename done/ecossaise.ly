@@ -16,7 +16,7 @@ global = {
     }
 
 A = {
-    \tempo "Andante" 2 = 84
+    \tempo "Mechanically, without nuance" 2 = 84
     \clef treble
     \key f \major
 
