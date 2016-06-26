@@ -64,8 +64,10 @@ stuff = \relative c' {
     | g2\< c,,4)
     | b(\> g'\! b)
     | d( g) a8 b
-    | bf2(_\markup { \italic "rit." } f4)
-    | a2(\> e4)
+    | bf2.(_\markup { \italic "rit." } ~
+    | bf2 f4)
+    | a2.(\> ~
+    | a2 e4)
     | a2.\pp\open\fermata
 
     \bar "|."
