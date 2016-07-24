@@ -107,7 +107,7 @@ dynamics = {
     | s2.
     | s2^\markup { \italic "molto rit." } s4.\sf
 
-    | s1-\markup { \italic "a tempo" }
+    | s1-\markup { \italic "large" }
     }
 
 B = {
@@ -171,7 +171,7 @@ B = {
             | \oneVoice b'!8( c e <b' e>4) \voiceTwo bf,,8(
             | a2) \acciaccatura d8 d4.
 
-            | <e g e'>1
+            | <e g d'>1
             | <c g' c>
             | <g' d'>
             | <c, g'>
