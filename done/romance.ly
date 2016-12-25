@@ -30,8 +30,10 @@ stuff = \relative c' {
     | e2._\markup { \italic "rit." } ~
     | e4 r bf
 
-    | a''2(-\mp_\markup { \italic "a tempo" } d,4)
-    | gs(\< cs,) fs8 gs
+    | a''2.-\mp_\markup { \italic "a tempo" } ~
+    | a2 d,4
+    | gs2.
+    | cs,4(\< e) fs8 gs
     | a4\mf b8 cs b4
     | gs(\> fs) e(
     | g) fs-- e--
