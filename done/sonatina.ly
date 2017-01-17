@@ -7,7 +7,14 @@
 
 \header {
     title = "Sonatina"
-    copyright = "© 2015"
+    copyright = "© 2017"
+    }
+
+awkwardSilence = \markup {
+    \center-column {
+        \line { "awkward silence" }
+        \line { \musicglyph #"scripts.ufermata" }
+        }
     }
 
 A = {
@@ -26,20 +33,20 @@ A = {
             | c'16( f c g e'8)-. e-.
             | e16( gs e c f8)-. f-.
 
-            | d16 f d b c ef c a
-            | b d a c gs b! g bf
+            | d16( f d b) c( ef c a)
+            | b( d a c gs b! g bf)
             | r4 e,
             }
 
         \relative f' {
-            | r4 r8 c'
-            | g' c, g' c,
-            | a' c,4 a'8(
+            | r4 r8 c'-.
+            | g'-. c,-. g'-. c,-.
+            | a'-. c,4-- a'8(
             | bf16 c a c gs c g c
-            | fs,4) r8 b,
+            | fs,4) r8 b,-.
 
-            | fs' b, fs' b,
-            | gs' b,4 cs8-.
+            | fs'-. b,-. fs'-. b,-.
+            | gs'-. b,4-- cs8-.
             | ds-. e-. fs-. gs-.
             | cs,4-- gs'16( f gs f
 
@@ -72,26 +79,30 @@ A = {
             | gs8)-. gs-. gs16( b gs es
             | fs8)-. fs-. cs'16( fs cs gs
             | es'8)-. es-. es16( gss es cs
-            | fs8)-. fs-. ds16 fs ds c
+            | fs8)-. fs-. ds16( fs ds c)
 
             \key f \major
-            | d f d b c ef c a
-            | b[ gs] <e! c' ef>_"as annoyingly as possible"
-            gs <e! c' ef> gs <e! c' ef> gs
-            | <e! c' ef> gs <e! c' ef> gs <e! c' ef> gs <e! c' ef> gs
+            | d( f d b) c( ef c a)
+            \slurUp
+            | b([ gs)] <e! c' ef>(->_"as annoyingly as possible"
+            gs <e! c' ef>-> gs <e! c' ef>-> gs
+            | <e! c' ef>-> gs <e! c' ef>-> gs <e! c' ef>-> gs <e! c' ef>-> gs)
+            \slurNeutral
 
             | r4 c,
-            | r4 r8 af'
-            | ef' af, ef' af,
-            | f' af,4 f'8(
+            | r4 r8 af'-.
+            | ef'-. af,-. ef'-. af,-.
+            | f'-. af,4-- f'8(
             | gf16 af f af e af ef af
-            | d,!4) r8 g,
+            | d,!4) r8 g,-.
 
-            | d' g, d' g,
-            | e' g,4 a8-.
-            | b-. c-. d-. e-.
-            | gf-. af-. bf!-. c
+            | d'-. g,-. d'-. g,-.
+            | e'-. g,4-- a8-.
+            | b-. cs-. ds-. e-.
+            | fs-. gs-. as-. b--
             }
+
+        | R2^\awkwardSilence
 
         \relative f' {
             | f4-- cs'16( bf cs bf
@@ -148,9 +159,10 @@ dynamics = {
         | s
         | s
         | s\<
-        | s
-        | s2*6\f
-        | s2\f
+        | s4. s8\f
+        | s2
+        | s2*6\mf
+        | s2\mf
         }
     }
 
@@ -188,16 +200,16 @@ B = {
             \clef treble
             | r8 e-. e-. e-.
             << {
-                | e e e e
-                | f f f f
+                | e-. e-. e-. e-.
+                | f-. f-. f-. f-.
                 }
             \\ {
-                | bf,2
-                | a
+                | bf,2(
+                | a)
                 } >>
-            | <bf g'>8 <a fs'> <gs f'> <g e'>
+            | <bf g'>8-. <a fs'>-. <gs f'>-. <g e'>-.
             \clef bass
-            | <fs ds'> as16[( b] as b as b
+            | <fs ds'>-- as16[( b] as b as b
             | a b a b a b a b
             | gs b gs b gs b gs b
             | fs b e, b' ds, b' d, b'
@@ -231,7 +243,7 @@ B = {
                 | b,2 ~
                 | b ~
                 | b
-                | b
+                | b_"meow"
                 | gs ~
                 | gs ~
                 | gs
@@ -278,29 +290,34 @@ B = {
 
             \key f \major
             | R2
-            | r8 af-. gf-. f-.
-            | ef-. df-. c-. bf-.
+            | r8 af-^ gf-^ f-^
+            | ef-^ df-^ c-^ bf-^
             \slurDown
             | af16( c ef af \change Staff = "A" \stemDown c4)
             \change Staff = "B" \stemNeutral \slurNeutral
 
             | r8 c-. c-. c-.
             << {
-                | c8 c c c
-                | df df df df
+                | c8-. c-. c-. c-.
+                | df-. df-. df-. df-.
                 }
             \\ {
-                | gf,2
-                | f
+                | gf,2(
+                | f)
                 } >>
-            | <gf ef'>8 <f d'> <e df'> <ef c'>
+            | <gf ef'>8-. <f d'>-. <e df'>-. <ef c'>-.
             \clef bass
-            | <d b'> fs16[( g] fs g fs g
+            | <d b'>-- fs16[( g] fs g fs g
             | f g f g f g f g
-            | e g e g e g e g
-            | f g e g d g c, g'
-            | bf,!8)-. af-. gf-. c,-.
+            | e g e g e g e g)
+            \slurDown  % LilyPond sucks
+            | f( g ds g cs, g' b, g'
+            | as, fs' gs, fs' fs,8)-. <b,, b'>--
+            \slurNeutral
             }
+
+        % LilyPond sucks and doesn't let you attach a fermata directly
+        | R2^\markup { \musicglyph #"scripts.ufermata" }
 
         \relative f {
             << {
@@ -312,7 +329,7 @@ B = {
                 | bf)
                 }
             \\ {
-                | <f,, f'>2\f ~
+                | <f,, f'>2\mf ~
                 | q
                 | q\mp ~
                 | q
@@ -329,7 +346,7 @@ B = {
                 | f
                 } >>
             <c' e>4-.
-            | f,16( c a f f,4)\sf
+            | f,16( c a f f,4)
             }
 
         }
