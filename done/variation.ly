@@ -118,9 +118,9 @@ A = {
     \bar "||"
 
     \mark "C1"
-    \tempo 4 = 60
+    \tempo 2 = 60
     \relative c'' {
-        \time 4/4
+        \time 2/2
         | r8 c4 c8 cs16( d cs8) gs cs,
         | r8 c'4 c8 cs16( d cs8) gs' cs
         | r2 r4 gs8-. <es cs'>-^
