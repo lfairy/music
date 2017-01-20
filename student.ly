@@ -28,7 +28,7 @@ A = {
     \relative c'' {
         | b4( g8 d' b4) e,8( g'
         | fs8 g b, e d e c a
-        | b4) << { g( e) } \\ { <b d fs>( c) } >> g'8( a
+        | b4) << { g( e) } \\ { <b d>( c) } >> g'8( a
         | b b g g e4)
         }
 
@@ -120,7 +120,17 @@ B = {
         } >>
     r4
 
-    R1*3  % TODO
+    << \relative c' {
+        | r4 <a cs> r <a c>
+        | r <c ef> r <bf d>
+        }
+    \\ \relative c {
+        | cs,2 d
+        | fs g
+        } >>
+    \relative c {
+        | r4 <f b>( <c g' ef'>)\arpeggio r
+        }
 
     \key g \major
     << \relative g {
@@ -133,7 +143,7 @@ B = {
         | d1 ~
         | d1
         | g2 c,
-        | g' d
+        | g' d->
         } >>
 
     << \relative g {
