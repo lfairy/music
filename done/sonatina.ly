@@ -6,7 +6,11 @@
 #(set-global-staff-size 23)
 
 \header {
-    title = "Sonatina"
+    title = "Chicken on wheels"
+    subtitle = \markup {
+        "is the first movement of"
+        \italic "Cutie Mark Crusaders Classical Composers Yay!"
+        }
     copyright = "© 2017"
     }
 
