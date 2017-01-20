@@ -81,12 +81,22 @@ B = {
     \repeat volta 2 {
         \relative f {
             | f,8-. c'-. <f a>4-- f,8-. c'-. <f a>4--
-            | <ef, bf'>4\arpeggio <g' ef'>-- <gf, df'>\arpeggio <bf' gf'>--
-            | f,8-. c'-. <af' c>4-- f,8-. c'-. <af' c>4--
+            << {
+                | r4 <g ef'>-- r <bf gf'>--
+                }
+            \\ {
+                | <ef,, bf'>2\arpeggio <gf df'>\arpeggio
+                } >>
+            | f8-. c'-. <af' c>4-- f,8-. c'-. <af' c>4--
             | <ef, bf' gf'>4\arpeggio <af c gf'>\arpeggio
-            << { g'8 d' b4 } \\ <g, d' g>2\arpeggio >>
+            << { g'8( d' b4) } \\ <g, d' g>2\arpeggio >>
             | f8-. c'-. <f a>4-- d,8-. a'-. <d f>4--
-            | <g,, g'>4\arpeggio <g' f'>-- << { g'4 e } \\ <c g'>2 >>
+            << {
+                | r4 <g, f'> g'4( e)
+                }
+            \\ {
+                | <g,, g'>2\arpeggio <c' g'>
+                } >>
             }
         }
 
@@ -108,9 +118,14 @@ B = {
             <bf f' bf>4\arpeggio <d' bf'>--
             | <e, cs'>8( <d b'> <c a'> <b gs'> <a fs'> <g e'> <f d'> <e cs'>)
             | <g d' bf'>4\arpeggio <d' f bf>\arpeggio
-            << { c'8 g' e4 } \\ <c, g' c>2\arpeggio >>
+            << { c'8( g' e4) } \\ <c, g' c>2\arpeggio >>
             | bf8-. f'-. <bf d>4-- g,8-. d'-. <g bf>4--
-            | <c,, c'>4\arpeggio <c' bf'>-- << { c'4 a } \\ <f c'>2 >>
+            << {
+                | r4 <c, bf'> c'4( a)
+                }
+            \\ {
+                | <c,, c'>2\arpeggio <f' c'>
+                } >>
             }
         }
     }
