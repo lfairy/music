@@ -65,7 +65,7 @@ A = {
     \relative c'' {
         | b4( g8 d' b4) e,8( g'
         | fs8 g b, e d e c a
-        | b4) << { g( e) } \\ { <b d fs>( c) } >> \slurUp g'8(-- a--
+        | b4) << { g( e) } \\ { <b d>( c) } >> \slurUp g'8(-- a--
         | b-- b-- g-- g)--
         << { e4( e8 d | e1) } \\ { s4 c ~ | c1 } >>
         }
@@ -121,8 +121,8 @@ B = {
     r4
 
     << \relative c' {
-        | r4 <a cs> r <a c>
-        | r <c ef> r <bf d>
+        | r4 <a cs> r <f a>
+        | r <c' ef> r <bf d>
         }
     \\ \relative c {
         | cs,2 d
