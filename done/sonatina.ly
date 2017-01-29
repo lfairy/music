@@ -103,7 +103,7 @@ A = {
             | d'-. g,-. d'-. g,-.
             | e'-. g,4-- a8-.
             | b-. cs-. ds-. e-.
-            | fs-. gs-. as-. b--
+            | fs-. gs-. as-. <b, b'>--
             }
 
         | R2^\awkwardSilence
@@ -237,7 +237,7 @@ B = {
             << {
                 | r4 f' ~
                 | f e ~
-                | e d
+                | e d?
                 | R2
                 | r4 d ~
                 | d cs ~
@@ -328,21 +328,21 @@ B = {
                 | r4 a(
                 | bf c)
                 | r a(
-                | bf g)
+                | bf c)
                 | r a(
                 | bf)
                 }
             \\ {
-                | <f,, f'>2\mf ~
-                | q
-                | q\mp ~
-                | q
-                | q\p ~
-                | q4
+                | f,2\mf ~
+                | f
+                | f\mp ~
+                | f
+                | f\p ~
+                | f4
                 }
             \\ {}
             \\ {
-                | s4 f'' ~
+                | s4 f' ~
                 | f2
                 | s4 f ~
                 | f2

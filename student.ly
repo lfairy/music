@@ -122,7 +122,7 @@ B = {
 
     << \relative c' {
         | r4 <a cs> r <f a>
-        | r <c' ef> r <bf d>
+        | r <fs c' ef> r <g bf d>
         }
     \\ \relative c {
         | cs,2 d
