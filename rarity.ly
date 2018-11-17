@@ -49,7 +49,7 @@ A = {
         }
 
     \relative c'' {
-        | d2.
+        | R2.
         | ef
         | f4 bf, c
         | d ef f
@@ -62,6 +62,42 @@ A = {
         | gs a b
         | c2.
         | d
+
+        | cs2. ~
+        | cs ~
+        | cs
+
+        | R2.*3
+        }
+
+    \relative c'' {
+        | r2 cs4 ~
+        | cs cs ds
+        | es fs gs
+        | as b cs
+        | d2. ~
+        \time 2/4
+        | d4 d ~
+        \time 3/4
+        | d cs b
+        | a gs fs
+        | fs8[ ds e as gs8. fs16]
+        % | \times 6/8 { fs8 d ds e es as gs fs }
+        | fs2. ~
+        \time 2/4
+        | fs4 fs ~
+        \time 3/4
+        | fs fs gs
+        | as b cs
+        | ds e fs
+        | gs a b
+        | c2. ~
+        \time 2/4
+        | c4 c ~
+        \time 3/4
+        | c b a
+        | g fs e
+        | ef d c
         }
 
     \bar "|."
@@ -74,7 +110,7 @@ B = {
 
     \relative c {
         r4
-        | r8. <gs gs'>16 q4 q ~
+        | r8. <g cs e g>16 q4 q ~
         | q r2
 
         | gs4 <e'' g> q
@@ -82,27 +118,38 @@ B = {
         | fs,, <gs' b f'> q
         | b,, <a'' b ds> <a b a'>
 
-        | e, <b'' e> <b gs'>
+        | e, <b'' e> <b e gs>
         | f, <c'' f a> r
         }
 
     \relative c {
         r
-        | fs, <as' cs> <as cs e?>
-        | cs,, <as'' d?> <as d e>
+        | fs, <as' cs e?> q
+        | cs,, <as'' d? e> q
         | gs, <gs' as ds> q
-        | ds, <fss' cs' ds> r
+        | ds, <fss' cs' ds> <cs' ds b'>
 
         | <gs,, gs'> <b'' ds gs> q
         | <b,, b'> <b'' ds gs> <b ds gss>
-        | <cs,, cs'> <cs'' es as> q
-        | fss, <cs' ds as'> r
+        | <cs,, cs'> <cs'' es gs> q
+        | fss, <cs' ds fss> r
         }
 
-    \clef treble
     \relative c' {
-        \repeat unfold 2 { | <ef gf bff>8. q16 q4 q }
-        \repeat unfold 2 { | <d f af>8. q16 q4 q }
+        % write out repeat by hand to avoid duplicating the accidental
+        | <af b? d>8. q16 q4 q
+        | <af b d>8. q16 q4 q
+        \repeat unfold 2 { | <af bf d>8. q16 q4 q }
+        \repeat unfold 2 { | <a c ef>8. q16 q4 q }
+        \repeat unfold 2 { | <bf df ff>8. q16 q4 q }
+        \repeat unfold 2 { | <b d e>8. q16 q4 q }
+        \repeat unfold 2 { | <bs ds fs>8. q16 q4 q }
+        \repeat unfold 3 { | <as cs fs>8. q16 q4 q }
+
+        | cs,,8. <b'' cs fs>16 q4 q
+        | r <b cs> q
+        | r q r
+        | q r q
         }
 
     }
