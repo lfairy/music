@@ -3,7 +3,7 @@
 \include "articulate.ly"
 \include "shared.ily"
 
-#(set-global-staff-size 23)
+#(set-global-staff-size 22)
 
 \header {
     title = "Chicken on wheels"
@@ -62,6 +62,8 @@ A = {
 
         }
 
+    \break
+
     \repeat volta 2 {
 
         \relative f' {
@@ -83,7 +85,7 @@ A = {
             | gs8)-. gs-. gs16( b gs es
             | fs8)-. fs-. cs'16( fs cs gs
             | es'8)-. es-. es16( gss es cs
-            | fs8)-. fs-. ds16( fs ds c)
+            | fs8)-. fs-. ds16( fs ds bs)
 
             \key f \major
             | d( f d b) c( ef c a)
@@ -93,25 +95,20 @@ A = {
             | <e! c' ef>-> gs <e! c' ef>-> gs <e! c' ef>-> gs <e! c' ef>-> gs)
             \slurNeutral
 
-            | r4 c,
-            | r4 r8 af'-.
-            | ef'-. af,-. ef'-. af,-.
-            | f'-. af,4-- f'8(
-            | gf16 af f af e af ef af
-            | d,!4) r8 g,-.
+            | r4 a,
+            | r4 r8 f'-.
+            | c'-. f,-. c'-. f,-.
+            | d'-. f,4-- d'8(
+            | ef16 f d f df f c f
+            | b,4) r8 e,-.
 
-            | d'-. g,-. d'-. g,-.
-            | e'-. g,4-- a8-.
-            | b-. cs-. ds-. e-.
-            | fs-. gs-. as-. <b, b'>--
+            | b'-. e,-. b'-. e,-.
+            | cs'-. e,4-- fs8-.
+            | gs-. a-. b-. cs-.
             }
 
-        | R2^\awkwardSilence
-
         \relative f' {
-            | f4-- cs'16( bf cs bf
-            | d bf d bf g bf g e
-            | f4) cs'16( bf cs bf
+            | fs4-- cs'16( bf cs bf
             | d bf d bf g bf g e
             | f4) cs'16( bf cs bf
             | d bf d bf g bf g e
@@ -163,10 +160,10 @@ dynamics = {
         | s
         | s
         | s\<
-        | s4. s8\f
+        | s\f
         | s2
-        | s2*6\mf
-        | s2\mf
+        | s2*2
+        | s2\f
         }
     }
 
@@ -294,63 +291,41 @@ B = {
 
             \key f \major
             | R2
-            | r8 af-^ gf-^ f-^
-            | ef-^ df-^ c-^ bf-^
-            \slurDown
-            | af16( c ef af \change Staff = "A" \stemDown c4)
+            | r8 f-^ ef-^ d-^
+            | c-^ bf-^ a-^ g-^
+            \slurDown \stemDown
+            | f16( a c f \change Staff = "A" a4)
             \change Staff = "B" \stemNeutral \slurNeutral
 
-            | r8 c-. c-. c-.
+            | r8 a-. a-. a-.
             << {
-                | c8-. c-. c-. c-.
-                | df-. df-. df-. df-.
+                | a8-. a-. a-. a-.
+                | bf-. bf-. bf-. bf-.
                 }
             \\ {
-                | gf,2(
-                | f)
+                | ef,2(
+                | d)
                 } >>
-            | <gf ef'>8-. <f d'>-. <e df'>-. <ef c'>-.
-            \clef bass
-            | <d b'>-- fs16[( g] fs g fs g
-            | f g f g f g f g
-            | e g e g e g e g)
-            \slurDown  % LilyPond sucks
-            | f( g ds g cs, g' b, g'
-            | as, fs' gs, fs' fs,8)-. <b,, b'>--
-            \slurNeutral
+            | <ef c'>8-. <d b'>-. <df bf'>-. <c a'>-.
+            | <b gs'>-- ds16[( e] ds e ds e
+            | d e d e d e d e
+            | cs e cs e cs e cs e)
+            | b( e a, e' gs, e' g, e'
+            | fs,4)
             }
 
-        % LilyPond sucks and doesn't let you attach a fermata directly
-        | R2^\markup { \musicglyph #"scripts.ufermata" }
-
         \relative f {
-            << {
-                | r4 a(
-                | bf c)
-                | r a(
-                | bf c)
-                | r a(
-                | bf)
+            <fs, ef'>4(
+            | <g d'>) <cs bf'>(
+            | <d a'>)
+            << { fs(
+                | g)
                 }
-            \\ {
-                | f,2\mf ~
-                | f
-                | f\mp ~
-                | f
-                | f\p ~
-                | f4
-                }
-            \\ {}
-            \\ {
-                | s4 f' ~
-                | f2
-                | s4 f ~
-                | f2
-                | s4 f ~
-                | f
+            \\ { d ~
+                | d
                 } >>
-            <c' e>4-.
-            | f,16( c a f f,4)
+            <c e bf'>-.
+            | f16( c a f f,4)
             }
 
         }
