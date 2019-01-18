@@ -81,8 +81,7 @@ A = {
         \time 3/4
         | d cs b
         | a gs fs
-        | fs8[ ds e as gs8. fs16]
-        % | \times 6/8 { fs8 d ds e es as gs fs }
+        | \times 2/3 { fs4 cs d } \times 2/3 { ds e es } \times 2/3 { as gs4. fs8 }
         | fs2. ~
         \time 2/4
         | fs4 fs ~
@@ -98,6 +97,16 @@ A = {
         | c b a
         | g fs e
         | ef d c
+        | \times 6/10 { b!8 f fs g gs a bf g' f8. ef16 }
+        | ef2. ~
+        \time 2/4
+        | ef4
+        }
+
+    \relative c'' {
+        ef4 ~
+        \time 3/4
+        | ef
         }
 
     \bar "|."
@@ -110,7 +119,7 @@ B = {
 
     \relative c {
         r4
-        | r8. <g cs e g>16 q4 q ~
+        | r8. <bf e g>16 q4 q ~
         | q r2
 
         | gs4 <e'' g> q
@@ -150,6 +159,30 @@ B = {
         | r <b cs> q
         | r q r
         | q r q
+        }
+
+    \relative c' {
+        | cs,, <b'' cs> r
+        | q r q
+        | r q r
+        | r b,, <b'' d>
+        | r <a b d>
+        | e, <gs' b d> r
+        | q r q
+        | r ef, q d q cs
+        | r fs <as' cs>
+        | r q
+        | e, <gs' as cs> r
+        | q r q
+        | r <g as cs> r
+        | f, q e
+        | r a, <a'' c>
+        | r <a c g'>
+        | d,, <a'' c fs> r
+        | q r q(
+        | <bf c fs>) d,, <bf'' c fs>
+        | <c,, c'> <bf'' c fs> <d,, d'>
+        | r <ef ef'> <bf'' ef g> r q
         }
 
     }
