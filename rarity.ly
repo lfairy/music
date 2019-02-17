@@ -7,7 +7,7 @@
 
 \header {
     title = "The worst possible thing"
-    copyright = "© 2018"
+    copyright = "© 2019"
     }
 
 A = {
@@ -81,7 +81,7 @@ A = {
         \time 3/4
         | d cs b
         | a gs fs
-        | \times 2/3 { fs4 cs d } \times 2/3 { ds e es } \times 2/3 { as gs4. fs8 }
+        | \times 2/3 { fs4^"TODO this is weird" cs d } \times 2/3 { ds e es } \times 2/3 { as gs4. fs8 }
         | fs2. ~
         \time 2/4
         | fs4 fs ~
@@ -89,24 +89,28 @@ A = {
         | fs fs gs
         | as b cs
         | ds e fs
-        | gs a b
-        | c2. ~
+        | g gs as
+        | b2. ~
         \time 2/4
-        | c4 c ~
+        | b4 b ~
         \time 3/4
-        | c b a
+        | b as gs
         | g fs e
-        | ef d c
-        | \times 6/10 { b!8 f fs g gs a bf g' f8. ef16 }
-        | ef2. ~
-        \time 2/4
-        | ef4
+        | R4*3-"TODO"
+        | R4*3
+        | r2 \times 2/3 { <ds, ds'>8 <cs cs'> <b b'> }
+        \time 5/4
+        | <b b'>2.
         }
 
     \relative c'' {
-        ef4 ~
-        \time 3/4
-        | ef
+        b2 ~
+        | b4 a af g gf
+        | f2. d'2 ~
+        | d4 c b bf a
+        | af2. f'2 ~
+        \time 4/4
+        | f4 e ef d
         }
 
     \bar "|."
@@ -175,14 +179,21 @@ B = {
         | e, <gs' as cs> r
         | q r q
         | r <g as cs> r
-        | f, q e
-        | r a, <a'' c>
-        | r <a c g'>
-        | d,, <a'' c fs> r
-        | q r q(
-        | <bf c fs>) d,, <bf'' c fs>
-        | <c,, c'> <bf'' c fs> <d,, d'>
-        | r <ef ef'> <bf'' ef g> r q
+        | e, q ds
+        | r gs, <gs'' b>
+        | r <gs b fs'>
+        | cs,, <b'' cs es> r
+        | <as cs e> r q
+        | r <cs,, cs'> <as'' cs e g>
+        | <cs,, cs'> <as'' cs e g> <cs,, cs'>
+        | <gs'' cs e gs> <fs,, fs'> <as'' cs e as>
+        | r <b,, b'> <b'' ds fs>
+        }
+
+    \relative c {
+        r4 b,
+        | c <c'' ef> r q r
+        | cs,, <cs'' e> <d f> <ef gf>
         }
 
     }
