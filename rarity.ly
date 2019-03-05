@@ -81,7 +81,8 @@ A = {
         \time 3/4
         | d cs b
         | a gs fs
-        | \times 2/3 { fs4^"TODO this is weird" cs d } \times 2/3 { ds e es } \times 2/3 { as gs4. fs8 }
+        | \times 2/3 { fs8 c cs } \times 2/3 { d ds d } \times 2/3 { ds e ds }
+        | \times 2/3 { e es e } \times 2/3 { es fs es } \times 2/3 { as g8. fs16 }
         | fs2. ~
         \time 2/4
         | fs4 fs ~
@@ -111,6 +112,25 @@ A = {
         | af2. f'2 ~
         \time 4/4
         | f4 e ef d
+        }
+
+    \relative c' {
+        | \times 2/3 { <e g cs>8 <f af d> q } \times 2/3 { q <fs a ef'> q }
+        q8[ <g bf e>] q r
+        | \times 2/3 { <g bf e>8 <gs b f'> q } \times 2/3 { q <a c gf'> q }
+        q8[ <as cs g'>] q r
+        \time 2/4
+        | \times 2/3 { q8 <b d gs> q } \times 2/3 { q <b d a'> q }
+        \time 5/4
+        | r4 <f' f'> q <e e'> q
+        }
+
+    \relative c'' {
+        \time 3/4
+        | e8. d16 d4 d ~
+        | d d cs
+        | cs8. b16 b4 b ~
+        | b b as
         }
 
     \bar "|."
@@ -192,8 +212,12 @@ B = {
 
     \relative c {
         r4 b,
-        | c <c'' ef> r q r
-        | cs,, <cs'' e> <d f> <ef gf>
+        | c <c'' ef> r q cs,,
+        | d <b'' d> <c ef> <cs e> <d f>
+        | ef,, <ef'' gf> r q e,,
+        | f <d'' f> <ds fs> <e g> <f af>
+        | fs,, <cs'' g' bf> r2
+        |
         }
 
     }
