@@ -1,0 +1,19 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install LilyPond
+      run: |
+        wget -O lilypond.sh http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.18.2-1.linux-64.sh
+        sh lilypond.sh --batch
+        $HOME/bin/lilypond --version
+
+    - name: Make
+      run: PATH="$HOME/bin:$PATH" make -j2
