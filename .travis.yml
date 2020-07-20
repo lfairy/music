@@ -1,8 +1,0 @@
-sudo: false
-
-install:
-  - wget -O lilypond.sh http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.18.2-1.linux-64.sh
-  - sh lilypond.sh --batch
-
-script:
-  - PATH="$HOME/bin:$PATH" make -j2
