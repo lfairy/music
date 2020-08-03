@@ -117,7 +117,7 @@ left_hand = \relative c {
         | r4 <g' c> r <g b>
         }
     \\ {
-        | <c, g' c>2\arpeggio <d a' d>\arpeggio
+        | <c,, g' c>2\arpeggio <d a' d>\arpeggio
         } >>
     | <c g' c>4\arpeggio <d a' d>\arpeggio <e b' e>2\arpeggio
 
