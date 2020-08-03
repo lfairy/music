@@ -17,6 +17,9 @@ jobs:
 
     - name: Make
       run: PATH="$HOME/bin:$PATH" make -j2
+      
+    - name: Install tree
+      run: sudo apt-get install tree
     
     - name: Prepare site
       run: |
