@@ -27,12 +27,10 @@ jobs:
         find . '(' -name '*.midi' -o -name '*.pdf' ')' -exec mv -t site '{}' '+'
         cd site
         tree -H . -T 'lambda fairy’s sexy music site' --dirsfirst --noreport --charset utf-8 -o index.html
-        touch .nojekyll
 
-    - name: Upload
-      uses: actions/upload-artifact@v2
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: results
-        path: |
-          **/*.midi
-          **/*.pdf
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
+        force_orphan: true
