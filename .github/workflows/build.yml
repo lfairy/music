@@ -17,6 +17,14 @@ jobs:
 
     - name: Make
       run: PATH="$HOME/bin:$PATH" make -j2
+    
+    - name: Prepare site
+      run: |
+        mkdir site
+        find . '(' -name '*.midi' -o -name '*.pdf' ')' -exec mv -t site '{}' '+'
+        cd site
+        tree -H . -T 'lambda fairy’s sexy music site' --dirsfirst --noreport --charset utf-8 -o index.html
+        touch .nojekyll
 
     - name: Upload
       uses: actions/upload-artifact@v2
