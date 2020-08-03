@@ -38,7 +38,7 @@ vocals = <<
 
         c'8
         | c fs, fs fs a g16 b ~ b8\fermata e,
-        | e g ef a d,4 r8\fermata c'
+        | e-! g-! ef-! a-! d,4-- r8\fermata c'
         | c b e, g \times 2/3 { a^\markup { \italic "molto rit." } g b ~ } b ef,
         | e a ef d c2^>
 
@@ -92,19 +92,19 @@ right_hand = \relative c' {
     | <c, e>8-!-\markup { \italic "sharply" } <e g>-! <b ef>-! <ef a>-!
     <f, a d>2\arpeggio\fermata
     | <e' a c>8( <d g b> <c f a> <b e g>)
-    << <d f>2\arpeggio \\ { \times 2/3 { a8(\arpeggio g b ~ } b4) } >>
+    << <d f>2 \\ { \times 2/3 { a8( g b ~ } b4) } >>
 
-    | <f a c e>4\arpeggio <g b ef>\arpeggio <e g c>2\arpeggio\fermata\sf
+    | <f a c e>4 <g b ef> <e g c>2\fermata\sf
     }
 
 left_hand = \relative c {
     \clef bass
     r8
     << {
-        | s2 a4 a
+        | g4. g8 a4 a
         }
     \\ {
-        | <c, g' c>2\arpeggio <d d'>\arpeggio
+        | <c, c'>2\arpeggio <d d'>\arpeggio
         | <c g' c>4\arpeggio <d a' d>\arpeggio <f c'>2\arpeggio
         } >>
 
@@ -114,7 +114,7 @@ left_hand = \relative c {
     | << <f, c'>1\arpeggio \\ { r4 f,2. } >>
 
     << {
-        | r4 <g' c> r <e b'>
+        | r4 <g' c> r <g b>
         }
     \\ {
         | <c, g' c>2\arpeggio <d a' d>\arpeggio
@@ -128,9 +128,9 @@ left_hand = \relative c {
     | c'8-! g'-! b,-! g'-!
     << <f, c'>2\arpeggio\fermata \\ { s4 \acciaccatura g8 <g g,>4\fermata } >>
 
-    | e'2 << <f, f'>2\arpeggio \\ { s4 <g, g'>-- } >>
-    | <f' d'>4\arpeggio <g d'>\arpeggio
-    << <c, c'>2\arpeggio\fermata \\ { s4 c,\fermata } >>
+    | e'2 f,4 <g, g'>
+    | f'4 g
+    << <c, c'>2\fermata \\ { s4 c,\fermata } >>
     }
 
 stuff = <<
