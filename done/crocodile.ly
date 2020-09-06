@@ -37,6 +37,7 @@ vocals = <<
         | r2 r4 r8
 
         c'8
+        \break  % LilyPond 2.20 layout issue
         | c fs, fs fs a g16 b ~ b8\fermata e,
         | e-! g-! ef-! a-! d,4-- r8\fermata c'
         | c b e, g \times 2/3 { a^\markup { \italic "molto rit." } g b ~ } b ef,
