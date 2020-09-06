@@ -29,6 +29,7 @@ A = {
         | g8( a g f) <g fs'>4-! e-!
         | a8( bf c d c bf a g
         | f4)-. e-. f2
+        \break
 
         | a4( bf8 c) bf4-! a-!
         | g8( a g f) g4-! e-!
@@ -39,6 +40,7 @@ A = {
         | g8( a g f) <g fs'>4-! e-!
         | a8( bf c d c bf a g
         | f4)-. e-. f2
+        \break
         }
 
     \relative d' {
