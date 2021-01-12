@@ -8,7 +8,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Install LilyPond
       run: |
         wget -O lilypond.sh https://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
@@ -17,10 +17,10 @@ jobs:
 
     - name: Make
       run: PATH="$HOME/bin:$PATH" make -j2
-      
+
     - name: Install tree
       run: sudo apt-get install tree
-    
+
     - name: Prepare site
       run: |
         mkdir site
