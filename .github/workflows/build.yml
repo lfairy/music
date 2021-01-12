@@ -16,7 +16,7 @@ jobs:
         $HOME/bin/lilypond --version
 
     - name: Make
-      run: PATH="$HOME/bin:$PATH" make -j2
+      run: PATH="$HOME/bin:$PATH" make -j$(nproc)
 
     - name: Install tree
       run: sudo apt-get install tree
