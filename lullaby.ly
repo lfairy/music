@@ -6,7 +6,7 @@
 #(set-global-staff-size 21)
 
 \header {
-    title = "Lullaby"
+    title = "Lullaby for the stars"
     copyright = "© 2015"
     }
 
@@ -14,7 +14,6 @@ pause = \markup { \musicglyph #"scripts.ufermata" }
 
 A = {
     \clef treble
-    \key e \major
     \set Staff.midiInstrument = #"acoustic grand"
     \tempo 4 = 80
 
@@ -47,7 +46,6 @@ A = {
 
 B = {
     \clef bass
-    \key f \major
     \set Staff.midiInstrument = #"acoustic grand"
 
     \relative f {
@@ -92,6 +90,7 @@ B = {
 
 stuff = <<
     \new PianoStaff <<
+        #(set-accidental-style 'piano)
         \new Staff = "A" { \A }
         \new Staff = "B" { \B }
         >>
