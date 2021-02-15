@@ -6,13 +6,13 @@
 #(set-global-staff-size 21)
 
 \header {
-    title = "Lullaby"
+    title = "Lullaby for a restless night"
     copyright = "© 2021"
     }
 
 A = {
     \set Staff.midiInstrument = #"acoustic grand"
-    \tempo 4. = 60
+    \tempo 4. = 50
     \time 6/8
 
     \clef treble
@@ -50,7 +50,7 @@ A = {
             }
         \\ {
             | b4. b
-            | r4 bf8 <g bf>4.
+            | r4. <g cs>4.
             | <gs c>-> <a cs>->
             | d2.
             } >>
@@ -91,26 +91,18 @@ B = {
         }
 
     \relative c {
-        % TODO: octaves better?
-        %{
         << {
             | r8 g' e' r g, e'
-            | r a, f' r a, f'
-            | r f, d' r f, ds'
-            | r g, \parenthesize c
+            | r a, d r a d
+            | r g, d' r g, ds'
+            | r g, \parenthesize c r g c
             }
         \\ {
             | <c,, c'>4. <e e'>
-            | <d d'> <cs cs'>
-            | <c c'> <b b'>
-            | <c c'> g'
+            | <d d'> <c c'>
+            | <b b'> <g g'>
+            | <c c'> <g g'>
             } >>
-        %}
-
-        | c8 g' e' e, g e'
-        | d, a' \parenthesize d cs, a' d
-        | c, a' d b, a' ds
-        | c, g' \parenthesize c g, c g'
         }
 
     \relative c {
@@ -119,10 +111,10 @@ B = {
             | r <a, a'> <g g'> <e e'> <cs cs'> <a a'>
             }
         \\ {
-            | e'4. ds
+            | <e e'>4. <ds ds'>
             % | cs4.
             } >>
-        | <f, f'>4.-> <e f'>->
+        | <f f'>4.-> <e f'>->
         | <d' f'>2.\arpeggio
         | g,8\( g' d' f g b ~
         | b <d f>4\) r4.
