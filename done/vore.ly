@@ -15,7 +15,7 @@ vocals = <<
         \clef treble
         \set Staff.instrumentName = #"Voice"
         \set Staff.midiInstrument = #"acoustic grand"
-        \tempo 4 = 112
+        \tempo "Ingenuously" 4 = 112
         \time 4/4
 
         | c4 d e2
