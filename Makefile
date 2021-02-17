@@ -2,7 +2,7 @@
 
 LYS := $(wildcard *.ly) $(wildcard done/*.ly) $(wildcard old/*.ly)
 PDFS := $(LYS:.ly=.pdf)
-LILYPOND := lilypond --loglevel=WARNING
+LILYPOND := lilypond --loglevel=WARNING -dno-point-and-click
 INCLUDES := shared.ily
 
 all: version $(PDFS)
