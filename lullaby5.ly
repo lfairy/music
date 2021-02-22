@@ -52,9 +52,9 @@ A = {
             | b4. b
             | r4. <g cs>4.
             | <gs c>-> <a cs>->
-            | d2.
+            | <a d>2.
             } >>
-        | g4\( d8 e4 f8
+        | g'4\( d8 e4 f8
         | g4 b8 g4. ~
         | g2.\)\fermata
         }
