@@ -108,7 +108,7 @@ B = {
     \relative c {
         << {
             | r8 e g r e g
-            | r <a, a'> <g g'> <e e'> <cs cs'> <a a'>
+            | r <bf,, bf'> <a a'> <g g'> <f f'> <e e'>
             }
         \\ {
             | <e e'>4. <ds ds'>
