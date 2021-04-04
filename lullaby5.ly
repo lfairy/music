@@ -12,7 +12,7 @@
 
 A = {
     \set Staff.midiInstrument = #"acoustic grand"
-    \tempo 4. = 50
+    \tempo 4. = 45
     \time 6/8
 
     \clef treble
